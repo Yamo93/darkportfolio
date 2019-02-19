@@ -1,0 +1,25 @@
+.aboutme {
+    background-color: $white;
+    color: $black;
+
+    .wrapper {
+        padding: 5rem;
+    }
+
+    &__title {
+        text-align: center;
+        position: relative;
+
+        &::after {
+            @include titleline;
+        }
+    }
+
+    &__info {
+        
+        &-img {
+            width: 9rem;
+            height: 9rem;
+        }
+    }
+}

@@ -3,25 +3,31 @@
     height: 100vh;
     background-color: $black;
     color: $white;
-
+    
     &__nav {
+        background-color: $black;
         width: 100%;
         padding: 0 5rem;
+        padding-bottom: 1rem;
         display: flex;
         justify-content: space-between;
 
         &-logo {
-            padding: 2rem;
+            padding: 1.5rem 0;
             text-align: center;
-            width: 15%;
+            color: $white;
+            // width: 15%;
+            display: inline-block;
+            border-bottom: 1.5px solid $brightyarrow;
         }
-
+        
         &-menu {
             display: flex;
             align-items: center;
             width: 50%;
-
+            
             &--item {
+                color: $white;
                 padding: 2.5rem;
                 transition: all .3s;
                 border-bottom: 3px solid transparent;
@@ -37,5 +43,35 @@
                 border-bottom: 3px solid $electronblue;
             }
         }
+    }
+
+    &__title {
+        margin-top: 10rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        font-size: 3.2rem;
+        letter-spacing: 1.8px;
+        font-weight: 300;
+        text-transform: uppercase;
+
+        &-desc {
+            color: $brightyarrow;
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+    }
+
+    &__desc {
+        width: 450px;
+        margin: 0 auto;
+    }
+
+    &__img {
+        object-fit: cover;
+        display: block;
+        width: 400px;
+        height: 30vh;
+        margin: 3rem auto;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .4);
     }
 }

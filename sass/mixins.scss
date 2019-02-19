@@ -1,0 +1,10 @@
+@mixin titleline {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 80px;
+    background-color: $electronblue;
+}
