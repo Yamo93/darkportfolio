@@ -101,5 +101,120 @@
     .history {
         background-color: #FEFEFE;
         color: #111;
+        padding: 5rem;
+
+        &__title {
+            text-align: center;
+            position: relative;
+            margin-bottom: 4rem;
+    
+            &::after {
+                @include titleline;
+            }
+        }
+
+        &__edu, &__work {
+            width: 45%;
+            
+            &-title {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            &-desc {
+                line-height: 1.6em;
+            }
+
+            ul {
+                margin-top: 3rem;
+                
+                li {
+
+                    .reached {
+                        position: relative;
+                        width: 50%;
+                        height: 2px;
+                        background-color: rgba(0, 0, 0, .3);
+                        margin-top: 4rem;
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            font-size: 1.2rem;
+                            top: -2rem;
+                            left: 0;
+                        }
+
+                        .fill {
+                            width: 50%;
+                            height: 100%;
+                            background-color: $green;
+                        }
+                    }
+
+                    .miun {
+                        &::before {
+                            content: 'Currently at 50%';
+                        }
+
+                        .fill {
+                            width: 50%;
+                        }
+                    }
+
+                    .fcc {
+                        &::before {
+                            content: 'Currently at 70%';
+                        }
+
+                        .fill {
+                            width: 70%;
+                        }
+                    }
+
+                    margin: 3.5rem 0;
+                    margin-left: 3rem;
+                    position: relative;
+
+                    &::before {
+                        content: '\01F449';
+                        position: absolute;
+                        left: -3rem;
+                        // top: 50%;
+                        // transform: translateY(-50%);
+                    }
+
+                    .edutitle {
+                        font-size: 1.6rem;
+                        margin-bottom: 1rem;
+                    }
+
+                    .eduplace {
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        &__work {
+            
+            .projectlink:link, .projectlink:visited {
+                display: block;
+                width: 17rem;
+                padding: 2rem 1.5rem;
+                margin-top: 3rem;
+                background-color: $electronblue;
+                color: $brightyarrow;
+                text-align: center;
+                font-weight: 600;
+                font-size: 1.6rem;
+                transition: all .3s;
+            }
+
+            .projectlink:hover, .projectlink:active {
+                background-color: darken($electronblue, 10%);
+            }
+        }
     }
 }

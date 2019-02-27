@@ -1,6 +1,7 @@
 $electronblue: #0984e3;
 $chigongred: #d63031;
 $brightyarrow: #fdcb6e;
+$green: rgb(19, 165, 19);
 $black: #111;
 $white: #FEFEFE;
 
@@ -47,7 +48,18 @@ ul {
     list-style: none;
 }
 
-a {
+a:link, a:visited {
     text-decoration: none;
-    color: inherit;
+    color: $electronblue;
+    font-weight: 600;
+    font-size: inherit;
+}
+
+a:hover, a:active {
+    color: darken($electronblue, 10%);
+}
+
+.flexing {
+    display: flex;
+    justify-content: space-between;
 }

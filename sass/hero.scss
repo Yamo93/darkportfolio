@@ -32,9 +32,13 @@
 
             li {
                 height: 100%;
+
             }
             
             &--item {
+                &:link, &:visited {
+
+                
                 display: block;
                 height: 100%;
                 color: $white;
@@ -42,8 +46,9 @@
                 padding: 2rem;
                 transition: all .3s;
                 border-bottom: 3px solid transparent;
+                }
 
-                &:hover {
+                &:hover, &:active {
                     background-color: rgba(#444, .6);
                     border-bottom: 3px solid $electronblue;
                 }

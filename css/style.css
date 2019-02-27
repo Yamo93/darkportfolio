@@ -29,9 +29,18 @@ p, li, a {
 ul {
   list-style: none; }
 
-a {
+a:link, a:visited {
   text-decoration: none;
-  color: inherit; }
+  color: #0984e3;
+  font-weight: 600;
+  font-size: inherit; }
+
+a:hover, a:active {
+  color: #0767b2; }
+
+.flexing {
+  display: flex;
+  justify-content: space-between; }
 
 @keyframes expand {
   0% {
@@ -66,7 +75,7 @@ a {
       height: 100%; }
       .hero__nav-menu li {
         height: 100%; }
-      .hero__nav-menu--item {
+      .hero__nav-menu--item:link, .hero__nav-menu--item:visited {
         display: block;
         height: 100%;
         color: #FEFEFE;
@@ -74,9 +83,9 @@ a {
         padding: 2rem;
         transition: all .3s;
         border-bottom: 3px solid transparent; }
-        .hero__nav-menu--item:hover {
-          background-color: rgba(68, 68, 68, 0.6);
-          border-bottom: 3px solid #0984e3; }
+      .hero__nav-menu--item:hover, .hero__nav-menu--item:active {
+        background-color: rgba(68, 68, 68, 0.6);
+        border-bottom: 3px solid #0984e3; }
       .hero__nav-menu .active {
         background-color: rgba(68, 68, 68, 0.6);
         border-bottom: 3px solid #0984e3; }
@@ -177,4 +186,78 @@ a {
             width: 75%; }
   .aboutme .history {
     background-color: #FEFEFE;
-    color: #111; }
+    color: #111;
+    padding: 5rem; }
+    .aboutme .history__title {
+      text-align: center;
+      position: relative;
+      margin-bottom: 4rem; }
+      .aboutme .history__title::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 2px;
+        width: 80px;
+        background-color: #0984e3; }
+    .aboutme .history__edu, .aboutme .history__work {
+      width: 45%; }
+      .aboutme .history__edu-title, .aboutme .history__work-title {
+        font-size: 2rem;
+        margin-bottom: 2rem; }
+      .aboutme .history__edu-desc, .aboutme .history__work-desc {
+        line-height: 1.6em; }
+      .aboutme .history__edu ul, .aboutme .history__work ul {
+        margin-top: 3rem; }
+        .aboutme .history__edu ul li, .aboutme .history__work ul li {
+          margin: 3.5rem 0;
+          margin-left: 3rem;
+          position: relative; }
+          .aboutme .history__edu ul li .reached, .aboutme .history__work ul li .reached {
+            position: relative;
+            width: 50%;
+            height: 2px;
+            background-color: rgba(0, 0, 0, 0.3);
+            margin-top: 4rem; }
+            .aboutme .history__edu ul li .reached::before, .aboutme .history__work ul li .reached::before {
+              content: '';
+              position: absolute;
+              font-size: 1.2rem;
+              top: -2rem;
+              left: 0; }
+            .aboutme .history__edu ul li .reached .fill, .aboutme .history__work ul li .reached .fill {
+              width: 50%;
+              height: 100%;
+              background-color: #13a513; }
+          .aboutme .history__edu ul li .miun::before, .aboutme .history__work ul li .miun::before {
+            content: 'Currently at 50%'; }
+          .aboutme .history__edu ul li .miun .fill, .aboutme .history__work ul li .miun .fill {
+            width: 50%; }
+          .aboutme .history__edu ul li .fcc::before, .aboutme .history__work ul li .fcc::before {
+            content: 'Currently at 70%'; }
+          .aboutme .history__edu ul li .fcc .fill, .aboutme .history__work ul li .fcc .fill {
+            width: 70%; }
+          .aboutme .history__edu ul li::before, .aboutme .history__work ul li::before {
+            content: '\01F449';
+            position: absolute;
+            left: -3rem; }
+          .aboutme .history__edu ul li .edutitle, .aboutme .history__work ul li .edutitle {
+            font-size: 1.6rem;
+            margin-bottom: 1rem; }
+          .aboutme .history__edu ul li .eduplace, .aboutme .history__work ul li .eduplace {
+            font-size: 1.4rem;
+            font-weight: 600; }
+    .aboutme .history__work .projectlink:link, .aboutme .history__work .projectlink:visited {
+      display: block;
+      width: 17rem;
+      padding: 2rem 1.5rem;
+      margin-top: 3rem;
+      background-color: #0984e3;
+      color: #fdcb6e;
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.6rem;
+      transition: all .3s; }
+    .aboutme .history__work .projectlink:hover, .aboutme .history__work .projectlink:active {
+      background-color: #0767b2; }
