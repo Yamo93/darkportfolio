@@ -4,6 +4,7 @@ $brightyarrow: #fdcb6e;
 $green: rgb(19, 165, 19);
 $black: #111;
 $white: #FEFEFE;
+$beige: rgb(238, 215, 167);
 
 $primary-font: 'Open Sans', sans-serif;
 $secondary-font: 'Raleway', sans-serif;
@@ -18,10 +19,25 @@ html, body {
     height: 100%;
     font-family: $primary-font;
     background-color: #111;
+    scroll-behavior: smooth;
+}
+
+.backdrop {
+    position: fixed;
+    z-index: 15;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .7);
 }
 
 html {
     font-size: 62.5%;
+}
+
+body {
+    position: relative;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -62,4 +78,23 @@ a:hover, a:active {
 .flexing {
     display: flex;
     justify-content: space-between;
+}
+
+.arrow {
+    cursor: pointer;
+    width: 6rem;
+    height: 6rem;
+    padding-bottom: .5rem;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 50;
+    bottom: 4rem;
+    right: 5rem;
+    background-color: $brightyarrow;
+    color: $electronblue;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, .4);
 }

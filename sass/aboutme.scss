@@ -41,7 +41,7 @@
         }
     }
 
-    .skills {
+    .technologies {
         background-color: #111;
         color: #FEFEFE;
         padding: 5rem;
@@ -102,6 +102,7 @@
         background-color: #FEFEFE;
         color: #111;
         padding: 5rem;
+        position: relative;
 
         &__title {
             text-align: center;
@@ -214,6 +215,111 @@
 
             .projectlink:hover, .projectlink:active {
                 background-color: darken($electronblue, 10%);
+            }
+        }
+
+        .certificates {
+            padding: 1.5rem 3rem;
+            width: 90vw;
+            height: 85vh;
+            background-color: $beige;
+            box-shadow: 1px 2px 2px rgba(0, 0, 0, .3);
+            z-index: 20;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            .active {
+                color: $green;
+            }
+
+            .close {
+                cursor: pointer;
+                text-align: center;
+                margin-bottom: 1rem;
+                font-size: 5rem;
+                font-weight: 600;
+                color: $chigongred;
+            }
+
+            &__title {
+                text-align: center;
+                position: relative;
+                margin-bottom: 4rem;
+        
+                &::after {
+                    @include titleline;
+                }
+            }
+
+            &__img {
+                width: 80%;
+                height: 40vh;
+                margin: 3rem auto;
+                background-image: url(../img/certificates/basic_css_jonas.jpg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            &__courses {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                &-course {
+                    margin-bottom: 1rem;
+                    cursor: pointer;
+                    color: $electronblue;
+                    font-weight: 600;
+                    transition: all .3s;
+
+                    &:hover {
+                        color: darken($electronblue, 15%);
+                    }
+                }
+            }
+        }
+    }
+
+    .skills {
+        background-color: $black;
+        color: $white;
+        padding: 5rem;
+
+        &__title {
+            text-align: center;
+            position: relative;
+            margin-bottom: 4rem;
+    
+            &::after {
+                @include titleline;
+            }
+        }
+
+        &__box {
+            width: 50%;
+            margin: 5rem auto;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            &-item {
+                width: 30%;
+                margin-bottom: 4.5rem;
+                position: relative;
+
+                img {
+                    width: 100%;
+                }
+
+                p {
+                    position: absolute;
+                    bottom: -3rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
             }
         }
     }

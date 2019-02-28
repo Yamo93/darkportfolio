@@ -6,10 +6,23 @@
 html, body {
   height: 100%;
   font-family: "Open Sans", sans-serif;
-  background-color: #111; }
+  background-color: #111;
+  scroll-behavior: smooth; }
+
+.backdrop {
+  position: fixed;
+  z-index: 15;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7); }
 
 html {
   font-size: 62.5%; }
+
+body {
+  position: relative; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif; }
@@ -41,6 +54,24 @@ a:hover, a:active {
 .flexing {
   display: flex;
   justify-content: space-between; }
+
+.arrow {
+  cursor: pointer;
+  width: 6rem;
+  height: 6rem;
+  padding-bottom: .5rem;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 50;
+  bottom: 4rem;
+  right: 5rem;
+  background-color: #fdcb6e;
+  color: #0984e3;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4); }
 
 @keyframes expand {
   0% {
@@ -147,47 +178,48 @@ a:hover, a:active {
         line-height: 1.7em;
         font-size: 1.6rem;
         margin-bottom: 1.5rem; }
-  .aboutme .skills {
+  .aboutme .technologies {
     background-color: #111;
     color: #FEFEFE;
     padding: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center; }
-    .aboutme .skills__bars {
+    .aboutme .technologies__bars {
       width: 60%; }
-      .aboutme .skills__bars .technology {
+      .aboutme .technologies__bars .technology {
         margin-bottom: 2.5rem; }
-        .aboutme .skills__bars .technology__name {
+        .aboutme .technologies__bars .technology__name {
           margin-bottom: 1rem;
           font-size: 1.6rem; }
-        .aboutme .skills__bars .technology .bar {
+        .aboutme .technologies__bars .technology .bar {
           height: 3rem;
           width: 100%;
           background-color: #fdcb6e;
           box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3); }
-          .aboutme .skills__bars .technology .bar .reached {
+          .aboutme .technologies__bars .technology .bar .reached {
             height: 100%;
             width: 60%; }
-            .aboutme .skills__bars .technology .bar .reached .fill {
+            .aboutme .technologies__bars .technology .bar .reached .fill {
               background-color: #0984e3;
               width: 100%;
               height: 100%;
               animation: expand 1.5s ease-in-out 2s; }
-          .aboutme .skills__bars .technology .bar .html {
+          .aboutme .technologies__bars .technology .bar .html {
             width: 95%; }
-          .aboutme .skills__bars .technology .bar .css {
+          .aboutme .technologies__bars .technology .bar .css {
             width: 95%; }
-          .aboutme .skills__bars .technology .bar .js {
+          .aboutme .technologies__bars .technology .bar .js {
             width: 90%; }
-          .aboutme .skills__bars .technology .bar .react {
+          .aboutme .technologies__bars .technology .bar .react {
             width: 80%; }
-          .aboutme .skills__bars .technology .bar .php {
+          .aboutme .technologies__bars .technology .bar .php {
             width: 75%; }
   .aboutme .history {
     background-color: #FEFEFE;
     color: #111;
-    padding: 5rem; }
+    padding: 5rem;
+    position: relative; }
     .aboutme .history__title {
       text-align: center;
       position: relative;
@@ -261,3 +293,90 @@ a:hover, a:active {
       transition: all .3s; }
     .aboutme .history__work .projectlink:hover, .aboutme .history__work .projectlink:active {
       background-color: #0767b2; }
+    .aboutme .history .certificates {
+      padding: 1.5rem 3rem;
+      width: 90vw;
+      height: 85vh;
+      background-color: #eed7a7;
+      box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
+      z-index: 20;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+      .aboutme .history .certificates .active {
+        color: #13a513; }
+      .aboutme .history .certificates .close {
+        cursor: pointer;
+        text-align: center;
+        margin-bottom: 1rem;
+        font-size: 5rem;
+        font-weight: 600;
+        color: #d63031; }
+      .aboutme .history .certificates__title {
+        text-align: center;
+        position: relative;
+        margin-bottom: 4rem; }
+        .aboutme .history .certificates__title::after {
+          content: '';
+          position: absolute;
+          bottom: -8px;
+          left: 50%;
+          transform: translateX(-50%);
+          height: 2px;
+          width: 80px;
+          background-color: #0984e3; }
+      .aboutme .history .certificates__img {
+        width: 80%;
+        height: 40vh;
+        margin: 3rem auto;
+        background-image: url(../img/certificates/basic_css_jonas.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center; }
+      .aboutme .history .certificates__courses {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; }
+        .aboutme .history .certificates__courses-course {
+          margin-bottom: 1rem;
+          cursor: pointer;
+          color: #0984e3;
+          font-weight: 600;
+          transition: all .3s; }
+          .aboutme .history .certificates__courses-course:hover {
+            color: #065999; }
+  .aboutme .skills {
+    background-color: #111;
+    color: #FEFEFE;
+    padding: 5rem; }
+    .aboutme .skills__title {
+      text-align: center;
+      position: relative;
+      margin-bottom: 4rem; }
+      .aboutme .skills__title::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 2px;
+        width: 80px;
+        background-color: #0984e3; }
+    .aboutme .skills__box {
+      width: 50%;
+      margin: 5rem auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      .aboutme .skills__box-item {
+        width: 30%;
+        margin-bottom: 4.5rem;
+        position: relative; }
+        .aboutme .skills__box-item img {
+          width: 100%; }
+        .aboutme .skills__box-item p {
+          position: absolute;
+          bottom: -3rem;
+          left: 50%;
+          transform: translateX(-50%); }
