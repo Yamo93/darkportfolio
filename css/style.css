@@ -10,6 +10,7 @@ html, body {
   scroll-behavior: smooth; }
 
 .backdrop {
+  display: none;
   position: fixed;
   z-index: 15;
   top: 0;
@@ -294,6 +295,7 @@ a:hover, a:active {
     .aboutme .history__work .projectlink:hover, .aboutme .history__work .projectlink:active {
       background-color: #0767b2; }
     .aboutme .history .certificates {
+      display: none;
       padding: 1.5rem 3rem;
       width: 90vw;
       height: 85vh;
@@ -364,7 +366,7 @@ a:hover, a:active {
         width: 80px;
         background-color: #0984e3; }
     .aboutme .skills__box {
-      width: 50%;
+      width: 55%;
       margin: 5rem auto;
       display: flex;
       justify-content: space-between;

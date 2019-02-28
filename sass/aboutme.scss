@@ -219,6 +219,7 @@
         }
 
         .certificates {
+            display: none;
             padding: 1.5rem 3rem;
             width: 90vw;
             height: 85vh;
@@ -299,7 +300,7 @@
         }
 
         &__box {
-            width: 50%;
+            width: 55%;
             margin: 5rem auto;
             display: flex;
             justify-content: space-between;

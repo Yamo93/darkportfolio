@@ -23,6 +23,7 @@ html, body {
 }
 
 .backdrop {
+    display: none;
     position: fixed;
     z-index: 15;
     top: 0;
