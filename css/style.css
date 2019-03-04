@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *, *::before, *::after {
   box-sizing: border-box;
   padding: 0;
@@ -166,13 +167,13 @@ a:hover, a:active {
       background-color: #0984e3; }
   .aboutme__info {
     display: flex;
-    justify-content: space-between; }
+    justify-content: center; }
     .aboutme__info-img {
-      width: 45%;
-      height: 100%;
+      width: 40%;
+      height: 40vh;
       object-fit: contain; }
     .aboutme__info-text {
-      width: 50%; }
+      width: 40%; }
       .aboutme__info-text--title {
         margin-bottom: 2rem; }
       .aboutme__info-text--desc {
@@ -310,7 +311,8 @@ a:hover, a:active {
         color: #13a513; }
       .aboutme .history .certificates .close {
         cursor: pointer;
-        text-align: center;
+        width: 30px;
+        margin: 0 auto;
         margin-bottom: 1rem;
         font-size: 5rem;
         font-weight: 600;
@@ -382,3 +384,99 @@ a:hover, a:active {
           bottom: -3rem;
           left: 50%;
           transform: translateX(-50%); }
+
+.projects .wrapper {
+  padding: 5rem; }
+
+.projects__title {
+  text-align: center;
+  position: relative;
+  margin-bottom: 4rem; }
+  .projects__title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 80px;
+    background-color: #0984e3; }
+
+.projects__collection {
+  width: 100%;
+  margin: 5rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .projects__collection-item {
+    width: 30%;
+    min-width: 31.5rem;
+    background-color: #FEFEFE;
+    height: 35vh;
+    margin-bottom: 3rem;
+    padding: 1.5rem; }
+    .projects__collection-item .protector {
+      cursor: pointer;
+      width: 100%;
+      height: 70%;
+      overflow: hidden; }
+      .projects__collection-item .protector:hover .projects__collection-item--img {
+        transform: scale(1.3); }
+        .projects__collection-item .protector:hover .projects__collection-item--img .viewbtn, .projects__collection-item .protector:hover .projects__collection-item--img .srcbtn {
+          opacity: 1; }
+        .projects__collection-item .protector:hover .projects__collection-item--img::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          background-color: rgba(0, 0, 0, 0.2); }
+    .projects__collection-item--img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transition: all .5s; }
+      .projects__collection-item--img .viewbtn, .projects__collection-item--img .srcbtn {
+        opacity: 0;
+        padding: 1rem 1.5rem;
+        border: 1px solid #0984e3;
+        background-color: rgba(254, 254, 254, 0.7);
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all .3s; }
+        .projects__collection-item--img .viewbtn:hover, .projects__collection-item--img .srcbtn:hover {
+          background-color: #FEFEFE; }
+      .projects__collection-item--img .srcbtn {
+        top: 50%; }
+    .projects__collection-item--info {
+      margin-top: 5px;
+      width: 100%;
+      height: 30%;
+      background-color: #FEFEFE;
+      color: #111; }
+      .projects__collection-item--info .desc {
+        font-size: 1.6rem;
+        margin-bottom: .5rem; }
+      .projects__collection-item--info .tools {
+        font-size: 1.4rem;
+        margin-bottom: .5rem; }
+        .projects__collection-item--info .tools span {
+          font-weight: 600; }
+      .projects__collection-item--info .readmore {
+        display: block;
+        font-size: 1.6rem;
+        text-align: center; }
+  .projects__collection .projects__collection-item:nth-child(1) .protector .projects__collection-item--img {
+    background-image: url("../img/screenshots/Screenshot_2019-03-03 Bookworm.png"); }
+  .projects__collection .projects__collection-item:nth-child(2) .protector .projects__collection-item--img {
+    background-image: url("../img/screenshots/Screenshot_2019-03-03 Fastigheter Mäkleri.png"); }
+  .projects__collection .projects__collection-item:nth-child(3) .protector .projects__collection-item--img {
+    background-image: url("../img/screenshots/Screenshot_2019-03-03 Nätbygg AB.png"); }
+  .projects__collection .projects__collection-item:nth-child(4) .protector .projects__collection-item--img {
+    background-image: url("../img/screenshots/Screenshot_2019-03-03 Restaurant App.png"); }

@@ -18,16 +18,16 @@
 
     &__info {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         
         &-img {
-            width: 45%;
-            height: 100%;
+            width: 40%;
+            height: 40vh;
             object-fit: contain;
         }
 
         &-text {
-            width: 50%;
+            width: 40%;
 
             &--title {
                 margin-bottom: 2rem;
@@ -237,7 +237,8 @@
 
             .close {
                 cursor: pointer;
-                text-align: center;
+                width: 30px;
+                margin: 0 auto;
                 margin-bottom: 1rem;
                 font-size: 5rem;
                 font-weight: 600;

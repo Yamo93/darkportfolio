@@ -3,19 +3,30 @@ const DOMelements = {
     backdrop: document.querySelector('.backdrop'),
     closeBtn: document.querySelector('.close'),
     showCertBtn: document.querySelector('.showcertificates'),
+    certificates: document.querySelector('.certificates'),
     courses: document.querySelector('.certificates__courses'),
-    certImg: document.querySelector('.certificates__img')
+    certImg: document.querySelector('.certificates__img'),
+    firstCourse: document.querySelector('.first')
 };
 
 // Event Listeners
 window.addEventListener('load', loadActiveClass);
-DOMelements.showCertBtn.addEventListener('click', showCertificates);
-DOMelements.backdrop.addEventListener('click', hideCertificates);
-DOMelements.closeBtn.addEventListener('click', hideCertificates);
-DOMelements.courses.addEventListener('click', switchImages);
+if (DOMelements.showCertBtn || DOMelements.backdrop || DOMelements.closeBtn || DOMelements.courses) {
+    DOMelements.showCertBtn.addEventListener('click', showCertificates);
+    DOMelements.backdrop.addEventListener('click', hideCertificates);
+    window.addEventListener('keyup', hideCertificates);
+    DOMelements.closeBtn.addEventListener('click', hideCertificates);
+    DOMelements.courses.addEventListener('click', switchImages);
+}
 
+// State Tracking
+let certBoxDisplayed = false;
+
+// Functions
 function loadActiveClass() {
-    document.querySelector('.first').classList.add('active');
+    if(DOMelements.firstCourse) {
+        DOMelements.firstCourse.classList.add('active');
+    }
 }
 
 
@@ -25,13 +36,24 @@ function moveUserToTop() {
 
 function showCertificates(e) {
     e.preventDefault();
-    document.querySelector('.certificates').style.display = 'block';
-    document.querySelector('.backdrop').style.display = 'block';
+    DOMelements.certificates.style.display = 'block';
+    DOMelements.backdrop.style.display = 'block';
+    certBoxDisplayed = true;
 }
 
-function hideCertificates() {
-    document.querySelector('.backdrop').style.display = 'none';
-    document.querySelector('.certificates').style.display = 'none';
+function hideCertificates(e) {
+    if (certBoxDisplayed) {
+        if (e.type === 'keyup' && e.key === "Esc" || e.key === "Escape" || e.keyCode === 27) {
+            console.log(e.type);
+            DOMelements.backdrop.style.display = 'none';
+            DOMelements.certificates.style.display = 'none';
+            certBoxDisplayed = false;
+        } else if (e.type === 'click') {
+            DOMelements.backdrop.style.display = 'none';
+            document.querySelector('.certificates').style.display = 'none';
+            certBoxDisplayed = false;
+        }
+    }
 }
 
 function switchImages(e) {

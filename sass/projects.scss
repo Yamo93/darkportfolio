@@ -1,0 +1,150 @@
+.projects {
+    // background-color: $white;
+    // color: $black;
+
+    .wrapper {
+        padding: 5rem;
+    }
+
+    &__title {
+        text-align: center;
+        position: relative;
+        margin-bottom: 4rem;
+
+        &::after {
+            @include titleline;
+        }
+    }
+
+    &__collection {
+        width: 100%;
+        margin: 5rem auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        &-item {
+            width: 30%;
+            min-width: 31.5rem;
+            background-color: $white;
+            height: 35vh;
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+
+            .protector {
+                cursor: pointer;
+                width: 100%;
+                height: 70%;
+                overflow: hidden;
+
+                &:hover {
+                    .projects__collection-item--img {
+                        transform: scale(1.3);
+
+                        .viewbtn, .srcbtn {
+                            opacity: 1;
+                        }
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            top: 0; left: 0; bottom: 0; right: 0;
+                            background-color: rgba(0, 0, 0, .2);
+                        }
+                    }
+                }
+            }
+
+            &--img {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                transition: all .5s;
+
+                .viewbtn, .srcbtn {
+                    opacity: 0;
+                    padding: 1rem 1.5rem;
+                    border: 1px solid $electronblue;
+                    background-color: rgba($white, .7);
+                    position: absolute;
+                    top: 25%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    transition: all .3s;
+
+                    &:hover {
+                        background-color: $white;
+                    }
+                }
+
+                .srcbtn {
+                    top: 50%;
+                }
+            }
+
+            &--info {
+                margin-top: 5px;
+                width: 100%;
+                height: 30%;
+                background-color: $white;
+                color: $black;
+
+                .desc {
+                    font-size: 1.6rem;
+                    margin-bottom: .5rem;
+                }
+
+                .tools {
+                    font-size: 1.4rem;
+                    margin-bottom: .5rem;
+                    span {
+                        font-weight: 600;
+                    }
+                }
+
+                .readmore {
+                    display: block;
+                    font-size: 1.6rem;
+                    text-align: center;
+                }
+            }
+        }
+        
+        .projects__collection-item:nth-child(1) {
+            .protector {
+                .projects__collection-item--img {
+                    background-image: url("../img/screenshots/Screenshot_2019-03-03\ Bookworm.png");
+                }
+            }
+        }
+
+        .projects__collection-item:nth-child(2) {
+            .protector {
+                .projects__collection-item--img {
+                    background-image: url("../img/screenshots/Screenshot_2019-03-03\ Fastigheter\ Mäkleri.png");
+                }
+            }
+        }
+
+        .projects__collection-item:nth-child(3) {
+            .protector {
+                .projects__collection-item--img {
+                    background-image: url("../img/screenshots/Screenshot_2019-03-03\ Nätbygg\ AB.png");
+                }
+            }
+        }
+
+        .projects__collection-item:nth-child(4) {
+            .protector {
+                .projects__collection-item--img {
+                    background-image: url("../img/screenshots/Screenshot_2019-03-03\ Restaurant\ App.png");
+                }
+            }
+        }
+
+    }
+}
+
