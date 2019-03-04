@@ -384,6 +384,54 @@ a:hover, a:active {
           bottom: -3rem;
           left: 50%;
           transform: translateX(-50%); }
+      .aboutme .skills__box-item:nth-child(1)::after {
+        content: 'Semantic Markup, Clean and Scalable Code';
+        position: absolute;
+        z-index: 20;
+        bottom: -5rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #FEFEFE;
+        color: #111;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 2rem .5rem;
+        box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3); }
+  .aboutme .newskills {
+    background-color: #111;
+    color: #FEFEFE;
+    padding: 5rem; }
+    .aboutme .newskills__title {
+      text-align: center;
+      position: relative;
+      margin-bottom: 4rem; }
+      .aboutme .newskills__title::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 2px;
+        width: 80px;
+        background-color: #0984e3; }
+    .aboutme .newskills__box {
+      width: 55%;
+      margin: 5rem auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap; }
+      .aboutme .newskills__box-item {
+        width: 30%;
+        margin-bottom: 4.5rem;
+        position: relative; }
+        .aboutme .newskills__box-item img {
+          width: 100%; }
+        .aboutme .newskills__box-item p {
+          position: absolute;
+          bottom: -3rem;
+          left: 50%;
+          transform: translateX(-50%); }
 
 .projects .wrapper {
   padding: 5rem; }
