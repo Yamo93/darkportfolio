@@ -374,9 +374,33 @@ a:hover, a:active {
       justify-content: space-between;
       flex-wrap: wrap; }
       .aboutme .skills__box-item {
+        cursor: pointer;
         width: 30%;
         margin-bottom: 4.5rem;
-        position: relative; }
+        position: relative;
+        transition: all .3s; }
+        .aboutme .skills__box-item:hover {
+          transform: translateY(10px); }
+        .aboutme .skills__box-item:hover .skills__box-item--desc {
+          opacity: 1; }
+        .aboutme .skills__box-item--desc {
+          opacity: 0;
+          text-align: center;
+          position: absolute;
+          z-index: 20;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: rgba(254, 254, 254, 0.9);
+          color: #111;
+          font-size: 1.4rem;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          padding: 2rem .5rem;
+          box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
+          transition: all .3s;
+          backface-visibility: hidden; }
         .aboutme .skills__box-item img {
           width: 100%; }
         .aboutme .skills__box-item p {
@@ -384,20 +408,6 @@ a:hover, a:active {
           bottom: -3rem;
           left: 50%;
           transform: translateX(-50%); }
-      .aboutme .skills__box-item:nth-child(1)::after {
-        content: 'Semantic Markup, Clean and Scalable Code';
-        position: absolute;
-        z-index: 20;
-        bottom: -5rem;
-        left: 50%;
-        transform: translateX(-50%);
-        background-color: #FEFEFE;
-        color: #111;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        padding: 2rem .5rem;
-        box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3); }
   .aboutme .newskills {
     background-color: #111;
     color: #FEFEFE;
@@ -422,9 +432,33 @@ a:hover, a:active {
       justify-content: space-between;
       flex-wrap: wrap; }
       .aboutme .newskills__box-item {
+        cursor: pointer;
         width: 30%;
         margin-bottom: 4.5rem;
-        position: relative; }
+        position: relative;
+        transition: all .3s; }
+        .aboutme .newskills__box-item:hover {
+          transform: translateY(10px); }
+        .aboutme .newskills__box-item:hover .newskills__box-item--desc {
+          opacity: 1; }
+        .aboutme .newskills__box-item--desc {
+          opacity: 0;
+          text-align: center;
+          position: absolute;
+          z-index: 20;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: rgba(254, 254, 254, 0.9);
+          color: #111;
+          font-size: 1.4rem;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          padding: 2rem .5rem;
+          box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
+          transition: all .3s;
+          backface-visibility: hidden; }
         .aboutme .newskills__box-item img {
           width: 100%; }
         .aboutme .newskills__box-item p {
@@ -459,6 +493,7 @@ a:hover, a:active {
   .projects__collection-item {
     width: 30%;
     min-width: 31.5rem;
+    min-height: 27rem;
     background-color: #FEFEFE;
     height: 35vh;
     margin-bottom: 3rem;
@@ -528,3 +563,22 @@ a:hover, a:active {
     background-image: url("../img/screenshots/Screenshot_2019-03-03 Nätbygg AB.png"); }
   .projects__collection .projects__collection-item:nth-child(4) .protector .projects__collection-item--img {
     background-image: url("../img/screenshots/Screenshot_2019-03-03 Restaurant App.png"); }
+
+.project {
+  background-color: #FEFEFE;
+  color: #111; }
+  .project .wrapper {
+    padding: 5rem; }
+  .project__title {
+    text-align: center;
+    position: relative;
+    margin-bottom: 4rem; }
+    .project__title::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 2px;
+      width: 80px;
+      background-color: #0984e3; }
