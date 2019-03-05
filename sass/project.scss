@@ -1,9 +1,11 @@
 .project {
     background-color: $white;
-    color:$black;
-
+    color: $black;
+    height: 100%;
+    
     .wrapper {
         padding: 5rem;
+        background-color: $white;
     }
 
     &__title {
@@ -14,5 +16,54 @@
         &::after {
             @include titleline;
         }
+    }
+
+    &__desc {
+        width: 40%;
+        margin: 3rem auto;
+    }
+
+    &__imgtxt {
+        font-size: 1.4rem;
+        text-align: center;
+        margin: 1rem auto 1.5rem auto;
+    }
+
+    .moodboard1 {
+        background-image: url(../img/project1/moodboard.jpg);
+    }
+
+    &__moodboard {
+        width: 50%;
+        margin: 2rem auto;
+        height: 30vh;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .mockup1 {
+        background-image: url(../img/project1/mockup_main.jpg);
+    }
+    
+    &__mockup {
+        width: 40%;
+        margin: 2rem auto;
+        height: 60vh;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .4);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
+    }
+    
+    &__section {
+        width: 55%;
+        margin: 2rem auto;
+        height: 40vh;
+        box-shadow: 1px 1px 2px rgba(0, 0, 0, .4);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
     }
 }

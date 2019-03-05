@@ -149,7 +149,8 @@ a:hover, a:active {
 
 .aboutme {
   background-color: #FEFEFE;
-  color: #111; }
+  color: #111;
+  height: 100%; }
   .aboutme .wrapper {
     padding: 5rem; }
   .aboutme__title {
@@ -566,9 +567,11 @@ a:hover, a:active {
 
 .project {
   background-color: #FEFEFE;
-  color: #111; }
+  color: #111;
+  height: 100%; }
   .project .wrapper {
-    padding: 5rem; }
+    padding: 5rem;
+    background-color: #FEFEFE; }
   .project__title {
     text-align: center;
     position: relative;
@@ -582,3 +585,38 @@ a:hover, a:active {
       height: 2px;
       width: 80px;
       background-color: #0984e3; }
+  .project__desc {
+    width: 40%;
+    margin: 3rem auto; }
+  .project__imgtxt {
+    font-size: 1.4rem;
+    text-align: center;
+    margin: 1rem auto 1.5rem auto; }
+  .project .moodboard1 {
+    background-image: url(../img/project1/moodboard.jpg); }
+  .project__moodboard {
+    width: 50%;
+    margin: 2rem auto;
+    height: 30vh;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; }
+  .project .mockup1 {
+    background-image: url(../img/project1/mockup_main.jpg); }
+  .project__mockup {
+    width: 40%;
+    margin: 2rem auto;
+    height: 60vh;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top; }
+  .project__section {
+    width: 55%;
+    margin: 2rem auto;
+    height: 40vh;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top; }
