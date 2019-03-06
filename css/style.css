@@ -553,6 +553,8 @@ a:hover, a:active {
         .projects__collection-item--info .tools span {
           font-weight: 600; }
       .projects__collection-item--info .readmore {
+        width: 90px;
+        margin: 1rem auto 2.5rem auto;
         display: block;
         font-size: 1.6rem;
         text-align: center; }
@@ -571,7 +573,8 @@ a:hover, a:active {
   height: 100%; }
   .project .wrapper {
     padding: 5rem;
-    background-color: #FEFEFE; }
+    background-color: #FEFEFE;
+    text-align: center; }
   .project__title {
     text-align: center;
     position: relative;
@@ -585,6 +588,9 @@ a:hover, a:active {
       height: 2px;
       width: 80px;
       background-color: #0984e3; }
+  .project .viewproject {
+    font-size: 2rem;
+    display: inline-block; }
   .project__desc {
     width: 40%;
     margin: 3rem auto; }
@@ -612,11 +618,19 @@ a:hover, a:active {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top; }
-  .project__section {
+  .project .section2 {
+    background-image: url(../img/screenshots/Section_Project2_Fastigheter.jpg); }
+  .project .section4 {
+    background-image: url(../img/screenshots/Section_Project4_Restaurant.png); }
+  .project .section3 {
+    background-image: url(../img/screenshots/Section_Natbygg.png); }
+  .project .sitemap3 {
+    background-image: url(../img/screenshots/Sitemap_Project3.png); }
+  .project__section, .project__sitemap {
     width: 55%;
     margin: 2rem auto;
     height: 40vh;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top; }
+    background-position: center; }

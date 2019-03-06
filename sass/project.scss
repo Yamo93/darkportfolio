@@ -6,6 +6,7 @@
     .wrapper {
         padding: 5rem;
         background-color: $white;
+        text-align: center;
     }
 
     &__title {
@@ -16,6 +17,11 @@
         &::after {
             @include titleline;
         }
+    }
+
+    .viewproject {
+        font-size: 2rem;
+        display: inline-block;
     }
 
     &__desc {
@@ -56,14 +62,31 @@
         background-size: cover;
         background-position: top;
     }
+
+    .section2 {
+        background-image: url(../img/screenshots/Section_Project2_Fastigheter.jpg);
+    }
+
+    .section4 {
+        background-image: url(../img/screenshots/Section_Project4_Restaurant.png);
+    }
+
+    .section3 {
+        background-image: url(../img/screenshots/Section_Natbygg.png);
+    }
+
+    .sitemap3 {
+        background-image: url(../img/screenshots/Sitemap_Project3.png);
+    }
     
-    &__section {
+    &__section, &__sitemap {
         width: 55%;
         margin: 2rem auto;
         height: 40vh;
         box-shadow: 1px 1px 2px rgba(0, 0, 0, .4);
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: top;
+        background-position: center;
     }
+
 }
