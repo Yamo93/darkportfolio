@@ -8,3 +8,18 @@
     width: 80px;
     background-color: $electronblue;
 }
+
+@mixin linkbtn {
+    &:link, &:visited {
+        padding: 1rem 2.5rem;
+        background-color: $electronblue;
+        color: $white;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        transition: all .3s;
+    }
+
+    &:hover, &:active {
+        background-color: darken($electronblue, 15%);
+    }
+}

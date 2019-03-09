@@ -1,0 +1,135 @@
+.blog {
+    
+    .wrapper {
+        padding: 6rem 3rem;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left {
+        width: 65%;
+    }
+
+    &__right {
+        width: 30%;
+    }
+
+    &__article:nth-child(1) {
+        .blog__article-img {
+            background-image: url(../img/blogpics/christopher-gower-291246-unsplash.jpg);
+        }
+    }
+    &__article:nth-child(2) {
+        .blog__article-img {
+            background-image: url(../img/blogpics/chuttersnap-1423187-unsplash.jpg);
+        }
+    }
+    &__article:nth-child(3) {
+        .blog__article-img {
+            background-image: url(../img/blogpics/clement-h-544786-unsplash.jpg);
+        }
+    }
+    &__article:nth-child(4) {
+        .blog__article-img {
+            background-image: url(../img/blogpics/christopher-gower-291246-unsplash.jpg);
+        }
+    }
+
+    &__article {
+        width: 100%;
+        margin-bottom: 4rem;
+        box-shadow: 1px 1px 2px rgba(#fff, .3);
+
+        &-img {
+            width: 100%;
+            height: 50vh;
+            background-image: url(../img/blogpics/bruno-martins-25865-unsplash.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        &-info {
+            background-color: $white;
+            color: $black;
+            padding: 3rem;
+
+            &--date {
+                font-size: 1.4rem;
+                margin-bottom: 1.5rem;
+
+                span {
+                    color: $electronblue;
+                }
+            }
+
+            &--title {
+                margin-bottom: 1.5rem;
+            }
+
+            &--desc {
+                line-height: 1.6em;
+                font-size: 1.6rem;
+                margin-bottom: 2.5rem;
+            }
+
+            &--buttons {
+                text-align: center;
+
+                .readmore {
+                    @include linkbtn;
+                }
+            }
+        }
+    }
+
+    .recentposts {
+        padding-bottom: 3rem;
+        border-bottom: .5px solid rgba(#FFF, .6);
+
+        &__title {
+            margin-bottom: 2rem;
+        }
+
+        &__list {
+            list-style: disc;
+            margin-left: 2rem;
+
+            &-item {
+                opacity: .7;
+                transition: all .3s;
+                margin-bottom: 1rem;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                a {
+                    color: inherit;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+
+    .suggestions {
+        padding-top: 3rem;
+
+        &__title {
+            margin-bottom: 1.5rem;
+        }
+
+        &__text {
+            line-height: 1.6em;
+            font-size: 1.6rem;
+            margin-bottom: 2.5rem;
+        }
+
+        &__buttons {
+            text-align: center;
+        }
+
+        .contactbtn {
+            @include linkbtn;
+        }
+    }
+}
