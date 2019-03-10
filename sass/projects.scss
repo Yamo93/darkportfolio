@@ -1,5 +1,5 @@
 .projects {
-    // background-color: $white;
+    // background-color: $black;
     // color: $black;
 
     .wrapper {
@@ -26,9 +26,9 @@
         &-item {
             width: 30%;
             min-width: 31.5rem;
-            min-height: 27rem;
+            height: 100%;
             background-color: $white;
-            height: 35vh;
+            // height: 35vh;
             margin-bottom: 3rem;
             padding: 1.5rem;
 
@@ -59,7 +59,7 @@
             &--img {
                 position: relative;
                 width: 100%;
-                height: 100%;
+                height: 30vh;
                 background-position: center;
                 background-size: contain;
                 background-repeat: no-repeat;
@@ -87,7 +87,7 @@
             }
 
             &--info {
-                margin-top: 5px;
+                margin-top: 1rem;
                 width: 100%;
                 height: 30%;
                 background-color: $white;
@@ -106,12 +106,24 @@
                     }
                 }
 
-                .readmore {
-                    width: 90px;
-                    margin: 1rem auto 2.5rem auto;
-                    display: block;
-                    font-size: 1.6rem;
+                .buttons {
                     text-align: center;
+                }
+
+                .readmore {
+                    &:link, &:visited {
+                        display: inline-block;
+                        font-size: 1.4rem;
+                        background-color: $electronblue;
+                        color: $white;
+                        padding: 1rem 2.5rem;
+                        margin: 1rem 0;
+                        transition: all .3s;
+                    }
+
+                    &:hover, &:active {
+                        background-color: darken($electronblue, 15%);
+                    }
                 }
             }
         }

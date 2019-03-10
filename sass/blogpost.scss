@@ -1,0 +1,30 @@
+.blogpost {
+    
+    .wrapper {
+        background-color: $white;
+        color: $black;
+    }
+
+    .blog__article {
+        box-shadow: 1px 1.5px 2px rgba(#333, .7);
+    }
+
+    .recentposts {
+        padding-bottom: 3rem;
+        border-bottom: .5px solid rgba(#000, .6);
+    }
+
+    .blog__article-info {
+        padding: 5rem 20%;
+    }
+
+    .blog__article-info--desc {
+        opacity: .7;
+    }
+
+    .blog__article-info--text {
+        font-size: 1.6rem;
+        line-height: 1.6em;
+        margin-bottom: 2rem;
+    }
+}

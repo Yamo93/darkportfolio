@@ -18,7 +18,7 @@ $secondary-font: 'Raleway', sans-serif;
 html, body {
     height: 100%;
     font-family: $primary-font;
-    background-color: #111;
+    // background-color: rgba(#111, .7);
     scroll-behavior: smooth;
 }
 
@@ -30,7 +30,7 @@ html, body {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, .7);
+    // background-color: rgba(0, 0, 0, .7);
 }
 
 html {
@@ -39,6 +39,25 @@ html {
 
 body {
     position: relative;
+    background-color: $black;
+}
+
+.background, .cover {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -10;
+}
+
+.cover {
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+}
+
+.background {
+    z-index: -5;
 }
 
 h1, h2, h3, h4, h5, h6 {

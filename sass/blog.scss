@@ -1,4 +1,10 @@
-.blog {
+.blog, .blogpost {
+    background-color: $black;
+
+    .title {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
     
     .wrapper {
         padding: 6rem 3rem;
