@@ -15,10 +15,22 @@
     <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <div class="backdrop"></div>
+    <div class="dropdown">
+        <ul>
+            <li class="dropdown-close">&times;</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </div>
     <div class="cover"></div>
     <div class="hero">
         <nav class="hero__nav">
@@ -30,10 +42,11 @@
                 <li><a href="blog.html" class="hero__nav-menu--item">Blog</a></li>
                 <li><a href="contact.html" class="hero__nav-menu--item">Contact Me</a></li>
             </ul>
+            <i class="fas fa-bars hamburger"></i>
         </nav>
 
         <h1 class="hero__title">Yamo Gebrewold</h1>
-        <h2 class="hero__title-desc">Front-End Developer</h2>
+        <h2 class="hero__title-desc">Web Developer</h2>
         <img src="img/desktop.jpeg" alt="Bild på Yamo" class="hero__img">
         <p class="hero__desc">I'm a 26-year-old web developer. Born and raised in Malmö, Sweden. Although I'm focusing
             mainly on front-end technologies, I meanwhile study back-end development on the side and strive towards

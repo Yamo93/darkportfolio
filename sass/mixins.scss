@@ -23,3 +23,9 @@
         background-color: darken($electronblue, 15%);
     }
 }
+
+@mixin mediaquery($maxwidth) {
+    @media screen and (max-width: $maxwidth) {
+        @content;
+      }
+}

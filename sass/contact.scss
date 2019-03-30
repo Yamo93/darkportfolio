@@ -1,0 +1,46 @@
+.contact {
+    // A lot of it is in aboutme.scss
+    height: 90vh;
+
+    &__info {
+
+        &-text {
+            width: 50%;
+        }
+    }
+
+    .buttons {
+        margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        
+        .button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-right: 1rem;
+            margin-bottom: 3.5rem;
+
+            .icon {
+                font-size: 4rem;
+                margin-bottom: 1rem;
+            }
+
+            span {
+                padding: .5rem .8rem;
+                background-color: $brightyarrow;
+                color: $black;
+                font-size: 1.2rem;
+                transition: all .3s;
+
+                &:hover {
+                    background-color: darken($brightyarrow, 15%);
+                }
+            }
+            
+        }
+    }
+
+}

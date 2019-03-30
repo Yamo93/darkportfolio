@@ -89,6 +89,26 @@ a:hover, a:active {
   align-items: center;
   box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4); }
 
+.dropdown {
+  transform: translateY(-100vh);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  z-index: 20;
+  background-color: #FEFEFE;
+  width: 100%;
+  height: 50vh;
+  min-height: auto;
+  padding: 3rem;
+  box-shadow: 2px 3px 3px rgba(254, 254, 254, 0.5); }
+  .dropdown-close {
+    font-size: 5rem;
+    font-weight: 600;
+    color: #d63031; }
+  .dropdown li {
+    margin-bottom: 1rem; }
+
 @keyframes expand {
   0% {
     width: 0%; }
@@ -100,6 +120,7 @@ a:hover, a:active {
   height: 100vh;
   color: #FEFEFE; }
   .hero__nav {
+    position: relative;
     background-color: #111;
     width: 100%;
     height: 10vh;
@@ -109,6 +130,12 @@ a:hover, a:active {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0.5px 1px 1px rgba(255, 255, 255, 0.5); }
+    .hero__nav .hamburger {
+      font-size: 4rem;
+      position: absolute;
+      right: 2rem;
+      top: 3rem;
+      cursor: pointer; }
     .hero__nav-logo {
       padding: 1.5rem 0;
       text-align: center;
@@ -120,6 +147,12 @@ a:hover, a:active {
       align-items: stretch;
       width: 50%;
       height: 100%; }
+      @media screen and (max-width: 950px) {
+        .hero__nav-menu {
+          width: 60%; } }
+      @media screen and (max-width: 800px) {
+        .hero__nav-menu {
+          width: 70%; } }
       .hero__nav-menu li {
         height: 100%; }
       .hero__nav-menu--item:link, .hero__nav-menu--item:visited {
@@ -161,17 +194,17 @@ a:hover, a:active {
     height: 30vh;
     margin: 3rem auto; }
 
-.aboutme {
+.aboutme, .contact {
   background-color: #FEFEFE;
   color: #111;
   height: 100%; }
-  .aboutme .wrapper {
+  .aboutme .wrapper, .contact .wrapper {
     padding: 5rem; }
-  .aboutme__title {
+  .aboutme__title, .contact__title {
     text-align: center;
     position: relative;
     margin-bottom: 4rem; }
-    .aboutme__title::after {
+    .aboutme__title::after, .contact__title::after {
       content: '';
       position: absolute;
       bottom: -8px;
@@ -180,68 +213,68 @@ a:hover, a:active {
       height: 2px;
       width: 80px;
       background-color: #0984e3; }
-  .aboutme__info {
+  .aboutme__info, .contact__info {
     display: flex;
     justify-content: center; }
-    .aboutme__info-img {
+    .aboutme__info-img, .contact__info-img {
       width: 40%;
       height: 40vh;
       object-fit: contain; }
-    .aboutme__info-text {
+    .aboutme__info-text, .contact__info-text {
       width: 40%; }
-      .aboutme__info-text--title {
+      .aboutme__info-text--title, .contact__info-text--title {
         margin-bottom: 2rem; }
-      .aboutme__info-text--desc {
+      .aboutme__info-text--desc, .contact__info-text--desc {
         line-height: 1.7em;
         font-size: 1.6rem;
         margin-bottom: 1.5rem; }
-  .aboutme .technologies {
+  .aboutme .technologies, .contact .technologies {
     background-color: #111;
     color: #FEFEFE;
     padding: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center; }
-    .aboutme .technologies__bars {
+    .aboutme .technologies__bars, .contact .technologies__bars {
       width: 60%; }
-      .aboutme .technologies__bars .technology {
+      .aboutme .technologies__bars .technology, .contact .technologies__bars .technology {
         margin-bottom: 2.5rem; }
-        .aboutme .technologies__bars .technology__name {
+        .aboutme .technologies__bars .technology__name, .contact .technologies__bars .technology__name {
           margin-bottom: 1rem;
           font-size: 1.6rem; }
-        .aboutme .technologies__bars .technology .bar {
+        .aboutme .technologies__bars .technology .bar, .contact .technologies__bars .technology .bar {
           height: 3rem;
           width: 100%;
           background-color: #fdcb6e;
           box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3); }
-          .aboutme .technologies__bars .technology .bar .reached {
+          .aboutme .technologies__bars .technology .bar .reached, .contact .technologies__bars .technology .bar .reached {
             height: 100%;
             width: 60%; }
-            .aboutme .technologies__bars .technology .bar .reached .fill {
+            .aboutme .technologies__bars .technology .bar .reached .fill, .contact .technologies__bars .technology .bar .reached .fill {
               background-color: #0984e3;
               width: 100%;
               height: 100%;
               animation: expand 1.5s ease-in-out 2s; }
-          .aboutme .technologies__bars .technology .bar .html {
+          .aboutme .technologies__bars .technology .bar .html, .contact .technologies__bars .technology .bar .html {
             width: 95%; }
-          .aboutme .technologies__bars .technology .bar .css {
+          .aboutme .technologies__bars .technology .bar .css, .contact .technologies__bars .technology .bar .css {
             width: 95%; }
-          .aboutme .technologies__bars .technology .bar .js {
+          .aboutme .technologies__bars .technology .bar .js, .contact .technologies__bars .technology .bar .js {
             width: 90%; }
-          .aboutme .technologies__bars .technology .bar .react {
+          .aboutme .technologies__bars .technology .bar .react, .contact .technologies__bars .technology .bar .react {
             width: 80%; }
-          .aboutme .technologies__bars .technology .bar .php {
+          .aboutme .technologies__bars .technology .bar .php, .contact .technologies__bars .technology .bar .php {
             width: 75%; }
-  .aboutme .history {
+  .aboutme .history, .contact .history {
     background-color: #FEFEFE;
     color: #111;
     padding: 5rem;
     position: relative; }
-    .aboutme .history__title {
+    .aboutme .history__title, .contact .history__title {
       text-align: center;
       position: relative;
       margin-bottom: 4rem; }
-      .aboutme .history__title::after {
+      .aboutme .history__title::after, .contact .history__title::after {
         content: '';
         position: absolute;
         bottom: -8px;
@@ -250,54 +283,54 @@ a:hover, a:active {
         height: 2px;
         width: 80px;
         background-color: #0984e3; }
-    .aboutme .history__edu, .aboutme .history__work {
+    .aboutme .history__edu, .aboutme .history__work, .contact .history__edu, .contact .history__work {
       width: 45%; }
-      .aboutme .history__edu-title, .aboutme .history__work-title {
+      .aboutme .history__edu-title, .aboutme .history__work-title, .contact .history__edu-title, .contact .history__work-title {
         font-size: 2rem;
         margin-bottom: 2rem; }
-      .aboutme .history__edu-desc, .aboutme .history__work-desc {
+      .aboutme .history__edu-desc, .aboutme .history__work-desc, .contact .history__edu-desc, .contact .history__work-desc {
         line-height: 1.6em; }
-      .aboutme .history__edu ul, .aboutme .history__work ul {
+      .aboutme .history__edu ul, .aboutme .history__work ul, .contact .history__edu ul, .contact .history__work ul {
         margin-top: 3rem; }
-        .aboutme .history__edu ul li, .aboutme .history__work ul li {
+        .aboutme .history__edu ul li, .aboutme .history__work ul li, .contact .history__edu ul li, .contact .history__work ul li {
           margin: 3.5rem 0;
           margin-left: 3rem;
           position: relative; }
-          .aboutme .history__edu ul li .reached, .aboutme .history__work ul li .reached {
+          .aboutme .history__edu ul li .reached, .aboutme .history__work ul li .reached, .contact .history__edu ul li .reached, .contact .history__work ul li .reached {
             position: relative;
             width: 50%;
             height: 2px;
             background-color: rgba(0, 0, 0, 0.3);
             margin-top: 4rem; }
-            .aboutme .history__edu ul li .reached::before, .aboutme .history__work ul li .reached::before {
+            .aboutme .history__edu ul li .reached::before, .aboutme .history__work ul li .reached::before, .contact .history__edu ul li .reached::before, .contact .history__work ul li .reached::before {
               content: '';
               position: absolute;
               font-size: 1.2rem;
               top: -2rem;
               left: 0; }
-            .aboutme .history__edu ul li .reached .fill, .aboutme .history__work ul li .reached .fill {
+            .aboutme .history__edu ul li .reached .fill, .aboutme .history__work ul li .reached .fill, .contact .history__edu ul li .reached .fill, .contact .history__work ul li .reached .fill {
               width: 50%;
               height: 100%;
               background-color: #13a513; }
-          .aboutme .history__edu ul li .miun::before, .aboutme .history__work ul li .miun::before {
+          .aboutme .history__edu ul li .miun::before, .aboutme .history__work ul li .miun::before, .contact .history__edu ul li .miun::before, .contact .history__work ul li .miun::before {
             content: 'Currently at 50%'; }
-          .aboutme .history__edu ul li .miun .fill, .aboutme .history__work ul li .miun .fill {
+          .aboutme .history__edu ul li .miun .fill, .aboutme .history__work ul li .miun .fill, .contact .history__edu ul li .miun .fill, .contact .history__work ul li .miun .fill {
             width: 50%; }
-          .aboutme .history__edu ul li .fcc::before, .aboutme .history__work ul li .fcc::before {
+          .aboutme .history__edu ul li .fcc::before, .aboutme .history__work ul li .fcc::before, .contact .history__edu ul li .fcc::before, .contact .history__work ul li .fcc::before {
             content: 'Currently at 70%'; }
-          .aboutme .history__edu ul li .fcc .fill, .aboutme .history__work ul li .fcc .fill {
+          .aboutme .history__edu ul li .fcc .fill, .aboutme .history__work ul li .fcc .fill, .contact .history__edu ul li .fcc .fill, .contact .history__work ul li .fcc .fill {
             width: 70%; }
-          .aboutme .history__edu ul li::before, .aboutme .history__work ul li::before {
+          .aboutme .history__edu ul li::before, .aboutme .history__work ul li::before, .contact .history__edu ul li::before, .contact .history__work ul li::before {
             content: '\01F449';
             position: absolute;
             left: -3rem; }
-          .aboutme .history__edu ul li .edutitle, .aboutme .history__work ul li .edutitle {
+          .aboutme .history__edu ul li .edutitle, .aboutme .history__work ul li .edutitle, .contact .history__edu ul li .edutitle, .contact .history__work ul li .edutitle {
             font-size: 1.6rem;
             margin-bottom: 1rem; }
-          .aboutme .history__edu ul li .eduplace, .aboutme .history__work ul li .eduplace {
+          .aboutme .history__edu ul li .eduplace, .aboutme .history__work ul li .eduplace, .contact .history__edu ul li .eduplace, .contact .history__work ul li .eduplace {
             font-size: 1.4rem;
             font-weight: 600; }
-    .aboutme .history__work .projectlink:link, .aboutme .history__work .projectlink:visited {
+    .aboutme .history__work .projectlink:link, .aboutme .history__work .projectlink:visited, .contact .history__work .projectlink:link, .contact .history__work .projectlink:visited {
       display: block;
       width: 17rem;
       padding: 2rem 1.5rem;
@@ -308,9 +341,9 @@ a:hover, a:active {
       font-weight: 600;
       font-size: 1.6rem;
       transition: all .3s; }
-    .aboutme .history__work .projectlink:hover, .aboutme .history__work .projectlink:active {
+    .aboutme .history__work .projectlink:hover, .aboutme .history__work .projectlink:active, .contact .history__work .projectlink:hover, .contact .history__work .projectlink:active {
       background-color: #0767b2; }
-    .aboutme .history .certificates {
+    .aboutme .history .certificates, .contact .history .certificates {
       display: none;
       padding: 1.5rem 3rem;
       width: 90vw;
@@ -322,9 +355,9 @@ a:hover, a:active {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%); }
-      .aboutme .history .certificates .active {
+      .aboutme .history .certificates .active, .contact .history .certificates .active {
         color: #13a513; }
-      .aboutme .history .certificates .close {
+      .aboutme .history .certificates .close, .contact .history .certificates .close {
         cursor: pointer;
         width: 30px;
         margin: 0 auto;
@@ -332,11 +365,11 @@ a:hover, a:active {
         font-size: 5rem;
         font-weight: 600;
         color: #d63031; }
-      .aboutme .history .certificates__title {
+      .aboutme .history .certificates__title, .contact .history .certificates__title {
         text-align: center;
         position: relative;
         margin-bottom: 4rem; }
-        .aboutme .history .certificates__title::after {
+        .aboutme .history .certificates__title::after, .contact .history .certificates__title::after {
           content: '';
           position: absolute;
           bottom: -8px;
@@ -345,7 +378,7 @@ a:hover, a:active {
           height: 2px;
           width: 80px;
           background-color: #0984e3; }
-      .aboutme .history .certificates__img {
+      .aboutme .history .certificates__img, .contact .history .certificates__img {
         width: 80%;
         height: 40vh;
         margin: 3rem auto;
@@ -353,27 +386,27 @@ a:hover, a:active {
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center; }
-      .aboutme .history .certificates__courses {
+      .aboutme .history .certificates__courses, .contact .history .certificates__courses {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap; }
-        .aboutme .history .certificates__courses-course {
+        .aboutme .history .certificates__courses-course, .contact .history .certificates__courses-course {
           margin-bottom: 1rem;
           cursor: pointer;
           color: #0984e3;
           font-weight: 600;
           transition: all .3s; }
-          .aboutme .history .certificates__courses-course:hover {
+          .aboutme .history .certificates__courses-course:hover, .contact .history .certificates__courses-course:hover {
             color: #065999; }
-  .aboutme .skills {
+  .aboutme .skills, .contact .skills {
     background-color: #111;
     color: #FEFEFE;
     padding: 5rem; }
-    .aboutme .skills__title {
+    .aboutme .skills__title, .contact .skills__title {
       text-align: center;
       position: relative;
       margin-bottom: 4rem; }
-      .aboutme .skills__title::after {
+      .aboutme .skills__title::after, .contact .skills__title::after {
         content: '';
         position: absolute;
         bottom: -8px;
@@ -382,23 +415,23 @@ a:hover, a:active {
         height: 2px;
         width: 80px;
         background-color: #0984e3; }
-    .aboutme .skills__box {
+    .aboutme .skills__box, .contact .skills__box {
       width: 55%;
       margin: 5rem auto;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap; }
-      .aboutme .skills__box-item {
+      .aboutme .skills__box-item, .contact .skills__box-item {
         cursor: pointer;
         width: 30%;
         margin-bottom: 4.5rem;
         position: relative;
         transition: all .3s; }
-        .aboutme .skills__box-item:hover {
+        .aboutme .skills__box-item:hover, .contact .skills__box-item:hover {
           transform: translateY(10px); }
-        .aboutme .skills__box-item:hover .skills__box-item--desc {
+        .aboutme .skills__box-item:hover .skills__box-item--desc, .contact .skills__box-item:hover .skills__box-item--desc {
           opacity: 1; }
-        .aboutme .skills__box-item--desc {
+        .aboutme .skills__box-item--desc, .contact .skills__box-item--desc {
           opacity: 0;
           text-align: center;
           position: absolute;
@@ -416,22 +449,22 @@ a:hover, a:active {
           box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
           transition: all .3s;
           backface-visibility: hidden; }
-        .aboutme .skills__box-item img {
+        .aboutme .skills__box-item img, .contact .skills__box-item img {
           width: 100%; }
-        .aboutme .skills__box-item p {
+        .aboutme .skills__box-item p, .contact .skills__box-item p {
           position: absolute;
           bottom: -3rem;
           left: 50%;
           transform: translateX(-50%); }
-  .aboutme .newskills {
+  .aboutme .newskills, .contact .newskills {
     background-color: #111;
     color: #FEFEFE;
     padding: 5rem; }
-    .aboutme .newskills__title {
+    .aboutme .newskills__title, .contact .newskills__title {
       text-align: center;
       position: relative;
       margin-bottom: 4rem; }
-      .aboutme .newskills__title::after {
+      .aboutme .newskills__title::after, .contact .newskills__title::after {
         content: '';
         position: absolute;
         bottom: -8px;
@@ -440,23 +473,23 @@ a:hover, a:active {
         height: 2px;
         width: 80px;
         background-color: #0984e3; }
-    .aboutme .newskills__box {
+    .aboutme .newskills__box, .contact .newskills__box {
       width: 55%;
       margin: 5rem auto;
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap; }
-      .aboutme .newskills__box-item {
+      .aboutme .newskills__box-item, .contact .newskills__box-item {
         cursor: pointer;
         width: 30%;
         margin-bottom: 4.5rem;
         position: relative;
         transition: all .3s; }
-        .aboutme .newskills__box-item:hover {
+        .aboutme .newskills__box-item:hover, .contact .newskills__box-item:hover {
           transform: translateY(10px); }
-        .aboutme .newskills__box-item:hover .newskills__box-item--desc {
+        .aboutme .newskills__box-item:hover .newskills__box-item--desc, .contact .newskills__box-item:hover .newskills__box-item--desc {
           opacity: 1; }
-        .aboutme .newskills__box-item--desc {
+        .aboutme .newskills__box-item--desc, .contact .newskills__box-item--desc {
           opacity: 0;
           text-align: center;
           position: absolute;
@@ -474,9 +507,9 @@ a:hover, a:active {
           box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.3);
           transition: all .3s;
           backface-visibility: hidden; }
-        .aboutme .newskills__box-item img {
+        .aboutme .newskills__box-item img, .contact .newskills__box-item img {
           width: 100%; }
-        .aboutme .newskills__box-item p {
+        .aboutme .newskills__box-item p, .contact .newskills__box-item p {
           position: absolute;
           bottom: -3rem;
           left: 50%;
@@ -769,3 +802,31 @@ a:hover, a:active {
   font-size: 1.6rem;
   line-height: 1.6em;
   margin-bottom: 2rem; }
+
+.contact {
+  height: 90vh; }
+  .contact__info-text {
+    width: 50%; }
+  .contact .buttons {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center; }
+    .contact .buttons .button {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-right: 1rem;
+      margin-bottom: 3.5rem; }
+      .contact .buttons .button .icon {
+        font-size: 4rem;
+        margin-bottom: 1rem; }
+      .contact .buttons .button span {
+        padding: .5rem .8rem;
+        background-color: #fdcb6e;
+        color: #111;
+        font-size: 1.2rem;
+        transition: all .3s; }
+        .contact .buttons .button span:hover {
+          background-color: #fcb023; }
