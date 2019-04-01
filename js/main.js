@@ -6,17 +6,35 @@ const DOMelements = {
     certificates: document.querySelector('.certificates'),
     courses: document.querySelector('.certificates__courses'),
     certImg: document.querySelector('.certificates__img'),
-    firstCourse: document.querySelector('.first')
+    firstCourse: document.querySelector('.first'),
+    hamburger: document.querySelector('.hamburger'),
+    closeDropdownBtn: document.querySelector('.dropdown-close'),
+    dropdown: document.querySelector('.dropdown')
 };
 
 // Event Listeners
 window.addEventListener('load', loadActiveClass);
-if (DOMelements.showCertBtn || DOMelements.backdrop || DOMelements.closeBtn || DOMelements.courses) {
+if (DOMelements.showCertBtn && DOMelements.backdrop && DOMelements.closeBtn && DOMelements.courses) {
     DOMelements.showCertBtn.addEventListener('click', showCertificates);
     DOMelements.backdrop.addEventListener('click', hideCertificates);
     window.addEventListener('keyup', hideCertificates);
     DOMelements.closeBtn.addEventListener('click', hideCertificates);
     DOMelements.courses.addEventListener('click', switchImages);
+}
+
+DOMelements.hamburger.addEventListener('click', showDropdown);
+DOMelements.closeDropdownBtn.addEventListener('click', hideDropdown);
+DOMelements.backdrop.addEventListener('click', hideDropdown);
+
+function showDropdown() {
+    DOMelements.dropdown.style.transform = 'translateY(0vh)';
+    DOMelements.backdrop.style.display = 'block';
+}
+
+function hideDropdown() {
+    console.log('yeo');
+    DOMelements.dropdown.style.transform = 'translateY(-100vh)';
+    DOMelements.backdrop.style.display = 'none';
 }
 
 // State Tracking
@@ -36,7 +54,10 @@ function moveUserToTop() {
 
 function showCertificates(e) {
     e.preventDefault();
-    DOMelements.certificates.style.display = 'block';
+    DOMelements.certificates.style.visibility = 'visible';
+    DOMelements.certificates.style.opacity = '1';
+    // DOMelements.certificates.style.zIndex = '20';
+    // DOMelements.certificates.classList.add('fadein');
     DOMelements.backdrop.style.display = 'block';
     certBoxDisplayed = true;
 }
@@ -46,11 +67,15 @@ function hideCertificates(e) {
         if (e.type === 'keyup' && e.key === "Esc" || e.key === "Escape" || e.keyCode === 27) {
             console.log(e.type);
             DOMelements.backdrop.style.display = 'none';
-            DOMelements.certificates.style.display = 'none';
+            DOMelements.certificates.style.visibility = 'hidden';
+            DOMelements.certificates.style.opacity = '0';
+            // DOMelements.certificates.style.zIndex = '-20';
             certBoxDisplayed = false;
         } else if (e.type === 'click') {
             DOMelements.backdrop.style.display = 'none';
-            document.querySelector('.certificates').style.display = 'none';
+            DOMelements.certificates.style.visibility = 'hidden';
+            DOMelements.certificates.style.opacity = '0';
+            // DOMelements.certificates.style.zIndex = '-20';
             certBoxDisplayed = false;
         }
     }

@@ -9,6 +9,8 @@ $beige: rgb(238, 215, 167);
 $primary-font: 'Open Sans', sans-serif;
 $secondary-font: 'Raleway', sans-serif;
 
+@import 'mixins';
+
 *, *::before, *::after {
     box-sizing: border-box;
     padding: 0;
@@ -30,10 +32,15 @@ html, body {
     left: 0;
     width: 100%;
     height: 100vh;
+    background-color: rgba(0, 0, 0, .4);
 }
 
 html {
     font-size: 62.5%;
+
+    @include mediaquery(700px) {
+      font-size: 56.25%;
+    }
 }
 
 body {
@@ -131,8 +138,10 @@ a:hover, a:active {
     min-height: auto;
     padding: 3rem;
     box-shadow: 2px 3px 3px rgba($white, .5);
+    transition: all .5s;
 
     &-close {
+        cursor: pointer;
         font-size: 5rem;
         font-weight: 600;
         color: $chigongred;

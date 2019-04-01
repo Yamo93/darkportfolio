@@ -220,7 +220,7 @@
         }
 
         .certificates {
-            display: none;
+            visibility: hidden;
             padding: 1.5rem 3rem;
             width: 90vw;
             height: 85vh;
@@ -231,6 +231,7 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            transition: all 1s;
 
             .active {
                 color: $green;

@@ -16,10 +16,14 @@ html, body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh; }
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4); }
 
 html {
   font-size: 62.5%; }
+  @media screen and (max-width: 700px) {
+    html {
+      font-size: 56.25%; } }
 
 body {
   position: relative;
@@ -101,8 +105,10 @@ a:hover, a:active {
   height: 50vh;
   min-height: auto;
   padding: 3rem;
-  box-shadow: 2px 3px 3px rgba(254, 254, 254, 0.5); }
+  box-shadow: 2px 3px 3px rgba(254, 254, 254, 0.5);
+  transition: all .5s; }
   .dropdown-close {
+    cursor: pointer;
     font-size: 5rem;
     font-weight: 600;
     color: #d63031; }
@@ -114,6 +120,20 @@ a:hover, a:active {
     width: 0%; }
   100% {
     width: 100%; } }
+
+@keyframes fadein {
+  0% {
+    display: none;
+    opacity: 0; }
+  0.001% {
+    display: block;
+    opacity: 0; }
+  100% {
+    display: block;
+    opacity: 1; } }
+
+#fadein {
+  animation: fadein 0.5s ease-in-out; }
 
 .hero {
   width: 100%;
@@ -131,11 +151,16 @@ a:hover, a:active {
     align-items: center;
     box-shadow: 0.5px 1px 1px rgba(255, 255, 255, 0.5); }
     .hero__nav .hamburger {
+      color: #FEFEFE;
+      display: none;
       font-size: 4rem;
       position: absolute;
       right: 2rem;
       top: 3rem;
       cursor: pointer; }
+      @media screen and (max-width: 700px) {
+        .hero__nav .hamburger {
+          display: block; } }
     .hero__nav-logo {
       padding: 1.5rem 0;
       text-align: center;
@@ -153,6 +178,9 @@ a:hover, a:active {
       @media screen and (max-width: 800px) {
         .hero__nav-menu {
           width: 70%; } }
+      @media screen and (max-width: 700px) {
+        .hero__nav-menu {
+          display: none; } }
       .hero__nav-menu li {
         height: 100%; }
       .hero__nav-menu--item:link, .hero__nav-menu--item:visited {
@@ -187,12 +215,19 @@ a:hover, a:active {
     width: 450px;
     margin: 0 auto;
     height: 20vh; }
+    @media screen and (max-width: 500px) {
+      .hero__desc {
+        width: 90%; } }
   .hero__img {
     object-fit: contain;
     display: block;
     width: 50%;
     height: 30vh;
     margin: 3rem auto; }
+    @media screen and (max-width: 500px) {
+      .hero__img {
+        object-fit: cover;
+        width: 80%; } }
 
 .aboutme, .contact {
   background-color: #FEFEFE;
@@ -344,7 +379,7 @@ a:hover, a:active {
     .aboutme .history__work .projectlink:hover, .aboutme .history__work .projectlink:active, .contact .history__work .projectlink:hover, .contact .history__work .projectlink:active {
       background-color: #0767b2; }
     .aboutme .history .certificates, .contact .history .certificates {
-      display: none;
+      visibility: hidden;
       padding: 1.5rem 3rem;
       width: 90vw;
       height: 85vh;
@@ -354,7 +389,8 @@ a:hover, a:active {
       position: fixed;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%); }
+      transform: translate(-50%, -50%);
+      transition: all 1s; }
       .aboutme .history .certificates .active, .contact .history .certificates .active {
         color: #13a513; }
       .aboutme .history .certificates .close, .contact .history .certificates .close {

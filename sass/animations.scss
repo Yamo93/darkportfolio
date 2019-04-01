@@ -7,3 +7,24 @@
         width: 100%;
     }
 }
+
+@keyframes fadein {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    0.001% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+#fadein {
+    animation: fadein 0.5s ease-in-out;
+}

@@ -18,11 +18,17 @@
         box-shadow: .5px 1px 1px rgba(#FFF, .5);
 
         .hamburger {
+            color: $white;
+            display: none;
             font-size: 4rem;
             position: absolute;
             right: 2rem;
             top: 3rem;
             cursor: pointer;
+
+            @include mediaquery(700px) {
+                display: block;
+            }
         }
 
         &-logo {
@@ -46,6 +52,10 @@
 
             @include mediaquery(800px) {
                 width: 70%;
+            }
+
+            @include mediaquery(700px) {
+              display: none;
             }
 
             li {
@@ -101,6 +111,10 @@
         width: 450px;
         margin: 0 auto;
         height: 20vh;
+
+        @include mediaquery(500px) {
+          width: 90%;
+        }
     }
 
     &__img {
@@ -110,5 +124,10 @@
         height: 30vh;
         margin: 3rem auto;
         // box-shadow: 1px 1px 2px rgba(0, 0, 0, .4);
+
+        @include mediaquery(500px) {
+          object-fit: cover;
+          width: 80%;
+        }
     }
 }
