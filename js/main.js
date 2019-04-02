@@ -32,7 +32,6 @@ function showDropdown() {
 }
 
 function hideDropdown() {
-    console.log('yeo');
     DOMelements.dropdown.style.transform = 'translateY(-100vh)';
     DOMelements.backdrop.style.display = 'none';
 }

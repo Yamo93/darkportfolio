@@ -14,11 +14,23 @@
     <meta name="msapplication-config" content="/img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="css/prism.css">
     <script src="js/prism.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div class="backdrop"></div>
+    <div class="dropdown">
+        <ul>
+            <li class="dropdown-close">&times;</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </div>
     <div class="hero blogpost">
         <nav class="hero__nav">
             <h1 class="hero__nav-logo">Yamo Geb</h1>
@@ -29,6 +41,7 @@
                 <li><a href="blog.html" class="hero__nav-menu--item active">Blog</a></li>
                 <li><a href="contact.html" class="hero__nav-menu--item">Contact Me</a></li>
             </ul>
+            <i class="fas fa-bars hamburger"></i>
         </nav>
 
         <div class="wrapper">
@@ -75,8 +88,25 @@
                 </div>
         </div>
 
+        <footer class="footer">
+            <div class="buttons">
+                <a href="mailto:yamo.gebrewold@gmail.com" class="button">
+                    <i class="far fa-envelope icon"></i>
+                    <span>Email Me</span></a>
+                <a href="pdf/cv_yg.pdf" class="button" target="_blank">
+                    <i class="far fa-file icon"></i>
+                    <span>Download My CV (Resume)</span></a>
+                <a href="https://www.linkedin.com/in/yamo-gebrewold-495063151/" class="button" target="_blank">
+                    <i class="fab fa-linkedin-in icon"></i>
+                    <span>My LinkedIn Profile</span></a>
+                <a href="https://github.com/Yamo93" class="button" target="_blank">
+                    <i class="fab fa-github icon"></i>
+                    <span>My Github Account</span></a>
+            </div>
+            <p class="copy">Copyright &copy; 2019 by Yamo Gebrewold</p>
+        </footer>
     </div>
-    <div class="arrow">&uarr;</div>
+    <div class="arrow" onclick="moveUserToTop()">&uarr;</div>
     <script src="js/main.js"></script>
 </body>
 </html>

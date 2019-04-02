@@ -10,14 +10,40 @@
         padding: 6rem 3rem;
         display: flex;
         justify-content: space-between;
+
+        @include mediaquery(700px) {
+          flex-direction: column;
+          padding: 3rem 1.5rem;
+          align-items: center;
+        }
     }
 
     &__left {
         width: 65%;
+
+        @include mediaquery(500px) {
+          width: 85%;
+        }
+
+        @include mediaquery(400px) {
+          width: 100%;
+        }
     }
 
     &__right {
         width: 30%;
+
+        @include mediaquery(700px) {
+          width: 65%;
+        }
+
+        @include mediaquery(500px) {
+            width: 85%;
+        }
+  
+        @include mediaquery(400px) {
+            width: 100%;
+        }
     }
 
     &__article:nth-child(1) {
@@ -92,6 +118,10 @@
         padding-bottom: 3rem;
         border-bottom: .5px solid rgba(#FFF, .6);
 
+        @include mediaquery(700px) {
+          display: none;
+        }
+
         &__title {
             margin-bottom: 2rem;
         }
@@ -119,6 +149,12 @@
 
     .suggestions {
         padding-top: 3rem;
+
+        @include mediaquery(700px) {
+          margin-bottom: 6rem;
+          padding-top: 3rem;
+          border-top: .5px solid rgba(#FFF, .6);
+        }
 
         &__title {
             margin-bottom: 1.5rem;

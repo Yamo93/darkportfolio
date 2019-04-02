@@ -104,6 +104,11 @@ a:hover, a:active {
 .flexing {
     display: flex;
     justify-content: space-between;
+
+    @include mediaquery(700px) {
+      flex-direction: column;
+      align-items: center;
+    }
 }
 
 .arrow {

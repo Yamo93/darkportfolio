@@ -4,7 +4,11 @@
     height: 100%;
 
     .wrapper {
-        padding: 5rem;
+        padding: 5rem 15%;
+
+        @include mediaquery(600px) {
+          padding: 5rem 2rem;
+        }
     }
 
     &__title {
@@ -19,16 +23,43 @@
 
     &__info {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
+
+        @include mediaquery(800px) {
+            flex-direction: column;
+            align-items: center;
+        }
         
         &-img {
             width: 40%;
             height: 40vh;
             object-fit: contain;
+
+            @include mediaquery(850px) {
+              height: 25rem;
+              width: 25rem;
+              object-fit: cover;
+            }
+
+            @include mediaquery(950px) {
+              margin-bottom: 2rem;
+            }
         }
 
         &-text {
             width: 40%;
+
+            @include mediaquery(950px) {
+              width: 50%;
+            }
+
+            @include mediaquery(800px) {
+              width: 80%;
+            }
+
+            @include mediaquery(450px) {
+              width: 95%;
+            }
 
             &--title {
                 margin-bottom: 2rem;
@@ -50,8 +81,20 @@
         flex-direction: column;
         align-items: center;
 
+        @include mediaquery(500px) {
+            padding: 5rem 2rem;
+        }
+
         &__bars {
             width: 60%;
+
+            @include mediaquery(600px) {
+              width: 85%;
+            }
+
+            @include mediaquery(450px) {
+              width: 95%;
+            }
 
             .technology {
                 margin-bottom: 2.5rem;
@@ -105,10 +148,18 @@
         padding: 5rem;
         position: relative;
 
+        @include mediaquery(500px) {
+            padding: 5rem 2rem;
+        }
+
         &__title {
             text-align: center;
             position: relative;
             margin-bottom: 4rem;
+
+            @include mediaquery(700px) {
+              margin-bottom: 5rem;
+            }
     
             &::after {
                 @include titleline;
@@ -117,6 +168,18 @@
 
         &__edu, &__work {
             width: 45%;
+
+            @include mediaquery(700px) {
+              width: 70%;
+            }
+
+            @include mediaquery(500px) {
+              width: 85%;
+            }
+
+            @include mediaquery(400px) {
+              width: 100%;
+            }
             
             &-title {
                 font-size: 2rem;
@@ -199,6 +262,12 @@
             }
         }
 
+        &__edu {
+            @include mediaquery(700px) {
+              margin-bottom: 4rem;
+            }
+        }
+
         &__work {
             
             .projectlink:link, .projectlink:visited {
@@ -232,6 +301,11 @@
             left: 50%;
             transform: translate(-50%, -50%);
             transition: all 1s;
+            overflow-y: scroll;
+
+            @include mediaquery(450px) {
+              padding: 1.5rem;
+            }
 
             .active {
                 color: $green;
@@ -265,6 +339,10 @@
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center;
+
+                @include mediaquery(600px) {
+                  width: 95%;
+                }
             }
 
             &__courses {
@@ -292,6 +370,10 @@
         color: $white;
         padding: 5rem;
 
+        @include mediaquery(600px) {
+          padding: 5rem 2rem;
+        }
+
         &__title {
             text-align: center;
             position: relative;
@@ -308,6 +390,18 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+
+            @include mediaquery(650px) {
+              width: 70%;
+            }
+
+            @include mediaquery(500px) {
+              width: 85%;
+            }
+
+            @include mediaquery(450px) {
+                width: 100%;
+            }
 
             &-item {
                 cursor: pointer;
@@ -390,6 +484,18 @@
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
+
+            @include mediaquery(650px) {
+                width: 70%;
+            }
+
+            @include mediaquery(500px) {
+                width: 85%;
+            }
+
+            @include mediaquery(450px) {
+                width: 100%;
+            }
             
             &-item {
                 cursor: pointer;
