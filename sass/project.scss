@@ -27,6 +27,26 @@
     &__desc {
         width: 40%;
         margin: 3rem auto;
+        text-align: left;
+
+        @include mediaquery(700px) {
+          width: 100%;
+        }
+    }
+
+    ul {
+        list-style-type: square;
+        width: 35%;
+        margin: 3rem auto;
+
+        @include mediaquery(700px) {
+          width: 80%;
+        }
+
+        li {
+            text-align: left;
+            margin-bottom: 1rem;
+        }
     }
 
     &__imgtxt {
@@ -71,6 +91,10 @@
         background-image: url(../img/screenshots/Section_Project4_Restaurant.png);
     }
 
+    .section5 {
+        background-image: url(../img/screenshots/section_opinion_comments.png);
+    }
+
     .section3 {
         background-image: url(../img/screenshots/Section_Natbygg.png);
     }
@@ -87,6 +111,23 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+
+        @include mediaquery(700px) {
+          width: 90%;
+        }
+    }
+
+    &__sectionsmall {
+        width: 40%;
+        background-size: contain;
+
+        @include mediaquery(700px) {
+          width: 80%;
+        }
+
+        @include mediaquery(400px) {
+          width: 95%;
+        }
     }
 
 }

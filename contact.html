@@ -20,16 +20,27 @@
 </head>
 <body>
     <div class="backdrop"></div>
+    <div class="dropdown">
+        <ul>
+            <li class="dropdown-close">&times;</li>
+            <li><a href="#">Home</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+        </ul>
+    </div>
     <div class="hero contact">
         <nav class="hero__nav">
             <h1 class="hero__nav-logo">Yamo Geb</h1>
             <ul class="hero__nav-menu">
                 <li><a href="index.html" class="hero__nav-menu--item">Home</a></li>
-                <li><a href="#" class="hero__nav-menu--item">About Me</a></li>
+                <li><a href="aboutme.html" class="hero__nav-menu--item">About Me</a></li>
                 <li><a href="projects.html" class="hero__nav-menu--item">Projects</a></li>
                 <li><a href="blog.html" class="hero__nav-menu--item">Blog</a></li>
-                <li><a href="contact.html" class="hero__nav-menu--item active">Contact Me</a></li>
+                <li><a href="#" class="hero__nav-menu--item active">Contact Me</a></li>
             </ul>
+            <i class="fas fa-bars hamburger"></i>
         </nav>
 
         <div class="wrapper">
@@ -38,13 +49,13 @@
             <img src="img/personalpic.jpeg" alt="Bild på skrivbord" class="contact__info-img">
             <div class="contact__info-text">
                 <h2 class="contact__info-text--title">How to reach me?</h2>
-                <p class="contact__info-text--desc">I would love to keep in touch with you. By clicking the buttons below, you can <a href="mailto:yamo.gebrewold@mail.com" target="_blank">email me</a>, <a href="pdf/cv_yg.pdf" target="_blank">download my CV (resume)</a>, <a href="https://www.linkedin.com/in/yamo-gebrewold-495063151/" target="_blank">view my LinkedIn profile</a> or <a href="https://github.com/Yamo93" target="_blank">watch my Github repos</a>.</p>
+                <p class="contact__info-text--desc">I would love to keep in touch with you. By clicking the buttons below, you can <a href="mailto:yamo.gebrewold@mail.com" target="_blank">email me</a>, <a href="pdf/cv_yg.pdf" target="_blank" download>download my CV (resume)</a>, <a href="https://www.linkedin.com/in/yamo-gebrewold-495063151/" target="_blank">view my LinkedIn profile</a> or <a href="https://github.com/Yamo93" target="_blank">watch my Github repos</a>.</p>
                 <p class="contact__info-text--desc">To see some of my coding stats from Github, feel free to watch <a href="https://sourcerer.io/yamo93" target="_blank">my Sourcerer.io profile.</a></p>
                 <div class="buttons">
                     <a href="mailto:yamo.gebrewold@gmail.com" class="button">
                         <i class="far fa-envelope icon"></i>
                         <span>Email Me</span></a>
-                    <a href="pdf/cv_yg.pdf" class="button" target="_blank">
+                    <a href="pdf/cv_yg.pdf" class="button" target="_blank" download>
                         <i class="far fa-file icon"></i>
                         <span>Download My CV (Resume)</span></a>
                     <a href="https://www.linkedin.com/in/yamo-gebrewold-495063151/" class="button" target="_blank">
@@ -58,6 +69,24 @@
         </div>
 
         </div>
+
+        <footer class="footer">
+            <div class="buttons">
+                <a href="mailto:yamo.gebrewold@gmail.com" class="button">
+                    <i class="far fa-envelope icon"></i>
+                    <span>Email Me</span></a>
+                <a href="pdf/cv_yg.pdf" class="button" target="_blank" download>
+                    <i class="far fa-file icon"></i>
+                    <span>Download My CV (Resume)</span></a>
+                <a href="https://www.linkedin.com/in/yamo-gebrewold-495063151/" class="button" target="_blank">
+                    <i class="fab fa-linkedin-in icon"></i>
+                    <span>My LinkedIn Profile</span></a>
+                <a href="https://github.com/Yamo93" class="button" target="_blank">
+                    <i class="fab fa-github icon"></i>
+                    <span>My Github Account</span></a>
+            </div>
+            <p class="copy">Copyright &copy; 2019 by Yamo Gebrewold</p>
+        </footer>
 
     </div>
     <div class="arrow" onclick="moveUserToTop()">&uarr;</div>

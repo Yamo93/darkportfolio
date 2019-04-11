@@ -38,6 +38,10 @@
             // width: 15%;
             display: block;
             border-bottom: 1.5px solid $brightyarrow;
+
+            a {
+                color: inherit;
+            }
         }
         
         &-menu {

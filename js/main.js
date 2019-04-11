@@ -87,23 +87,23 @@ function switchImages(e) {
         switch (e.target.dataset.id) {
             case ("1"): 
                 e.target.classList.add('active');
-                DOMelements.certImg.style.backgroundImage = 'url(../img/certificates/basic_css_jonas.jpg)';
+                DOMelements.certImg.style.backgroundImage = 'url(./img/certificates/basic_css_jonas.jpg)';
                 break;
             case ("2"): 
                 e.target.classList.add('active');
-                DOMelements.certImg.style.backgroundImage = 'url(../img/certificates/advanced_css_jonas.jpg)';
+                DOMelements.certImg.style.backgroundImage = 'url(./img/certificates/advanced_css_jonas.jpg)';
                 break;
             case ("3"): 
                 e.target.classList.add('active');
-                DOMelements.certImg.style.backgroundImage = 'url(../img/certificates/js_course_jonas.jpg)';
+                DOMelements.certImg.style.backgroundImage = 'url(./img/certificates/js_course_jonas.jpg)';
                 break;
             case ("4"): 
                 e.target.classList.add('active');
-                DOMelements.certImg.style.backgroundImage = 'url(../img/certificates/javascript_traversy.jpg)';
+                DOMelements.certImg.style.backgroundImage = 'url(./img/certificates/javascript_traversy.jpg)';
                 break;
             case ("5"): 
                 e.target.classList.add('active');
-                DOMelements.certImg.style.backgroundImage = 'url(../img/certificates/js_course_dylan_partone.jpg)';
+                DOMelements.certImg.style.backgroundImage = 'url(./img/certificates/js_course_dylan_partone.jpg)';
                     break;
         }
     }
