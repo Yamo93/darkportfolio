@@ -1,3 +1,4 @@
+
 // DOM Elements
 const DOMelements = {
     backdrop: document.querySelector('.backdrop'),
@@ -9,8 +10,21 @@ const DOMelements = {
     firstCourse: document.querySelector('.first'),
     hamburger: document.querySelector('.hamburger'),
     closeDropdownBtn: document.querySelector('.dropdown-close'),
-    dropdown: document.querySelector('.dropdown')
+    dropdown: document.querySelector('.dropdown'),
+    arrow: document.querySelector('.arrow')
 };
+
+// Checking if user is on top of page
+if(DOMelements.arrow) {
+    window.addEventListener('scroll', function() {
+        if(window.scrollY < 600) {
+            DOMelements.arrow.style.opacity = '0';
+        } else {
+            DOMelements.arrow.style.opacity = '1';
+        }
+    })
+}
+
 
 // Event Listeners
 window.addEventListener('load', loadActiveClass);

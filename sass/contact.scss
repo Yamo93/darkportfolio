@@ -44,6 +44,7 @@
             .icon {
                 font-size: 4rem;
                 margin-bottom: 1rem;
+                color: $electronblue;
             }
 
             span {
@@ -51,11 +52,16 @@
                 background-color: $brightyarrow;
                 color: $black;
                 font-size: 1.2rem;
+                font-weight: bold;
                 transition: all .3s;
 
                 &:hover {
                     background-color: darken($brightyarrow, 15%);
                 }
+            }
+
+            .swe, .eng {
+                padding: 0;
             }
             
         }
